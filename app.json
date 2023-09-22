@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "saleecolour-intranet",
+    "slug": "saleecolour-intranet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon-salee.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-salee.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access camera.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon-salee.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.pasakorn_b.saleecolourintranet"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ce63db0a-73cd-4d0f-b314-a9fa7c7e8c51"
+      }
+    },
+    "owner": "pasakorn_b"
+  }
+}
