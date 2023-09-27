@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import React from "react";
 import MyStack from "./components/MyStack";
+import registerNNPushToken from "native-notify";
 
 const App = () => {
+  registerNNPushToken(12543, "TgLzMcJg4xD75FLd7KI7Ai");
   return <MyStack></MyStack>;
 };
 

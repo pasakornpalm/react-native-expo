@@ -30,7 +30,8 @@
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
       ],
-      "package": "com.pasakorn_b.saleecolourintranet"
+      "package": "com.pasakorn_b.saleecolourintranet",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -54,6 +55,12 @@
         "projectId": "ce63db0a-73cd-4d0f-b314-a9fa7c7e8c51"
       }
     },
-    "owner": "pasakorn_b"
+    "owner": "pasakorn_b",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ce63db0a-73cd-4d0f-b314-a9fa7c7e8c51"
+    }
   }
 }

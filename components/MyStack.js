@@ -4,8 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import LoginScreen from "../screens/Login";
-import HomeScreen from "../screens/Home";
-import ProfileScreen from "../screens/Profile";
+import HomeScreen from "../screens/HomeMain";
+import ProfileScreen from "../screens/ProfileDetail";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,11 +36,11 @@ const MyStack = () => {
         <NavigationContainer>
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen
-              name="Home"
+              name="HomeMain"
               component={HomeScreen}
               options={{ title: "Intranet-Saleecolour" }}
             />
-            <Stack.Screen name="Profile" component={ProfileScreen} />
+            <Stack.Screen name="ProfileDetail" component={ProfileScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -52,11 +52,11 @@ const MyStack = () => {
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen
-              name="Home"
+              name="HomeMain"
               component={HomeScreen}
               options={{ title: "Intranet-Saleecolour" }}
             />
-            <Stack.Screen name="Profile" component={ProfileScreen} />
+            <Stack.Screen name="ProfileDetail" component={ProfileScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       );

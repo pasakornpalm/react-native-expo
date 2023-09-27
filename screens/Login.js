@@ -10,6 +10,7 @@ import { inputValidator } from "../helpers/inputValidator";
 import { passwordValidator } from "../helpers/passwordValidator";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { apiLink } from "../helpers/apiLink";
+import { registerIndieID } from "native-notify";
 
 export default function LoginScreen({ navigation }) {
   const [username, setUsername] = useState({ value: "", error: "" });
@@ -39,9 +40,10 @@ export default function LoginScreen({ navigation }) {
       console.log(data.status);
       if (data.status === "ok") {
         await AsyncStorage.setItem("@mid", data.mid);
+        registerIndieID(`userid-${data.mid}`, 12543, "TgLzMcJg4xD75FLd7KI7Ai");
         setUsername("");
         setPassword("");
-        navigation.navigate("Home");
+        navigation.navigate("HomeMain");
       } else if (data.status === "error1") {
         alert(data.message);
       } else if (data.status === "error2") {
@@ -53,7 +55,7 @@ export default function LoginScreen({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>INTRANET</Header>
+      <Header>INTRANET_V1</Header>
       <TextInput
         label="Username"
         returnKeyType="next"

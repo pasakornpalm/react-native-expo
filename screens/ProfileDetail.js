@@ -16,7 +16,7 @@ import IonicIcon from "react-native-vector-icons/Ionicons";
 import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import IconArt from "react-native-vector-icons/AntDesign";
-export default function Profile({ navigation }) {
+export default function ProfileDetail({ navigation }) {
   const Singout = () => {
     // console.log("done");
     Alert.alert("Are your sure?", "Do you want to sing out yes or no ?", [

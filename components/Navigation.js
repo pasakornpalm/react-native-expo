@@ -2,15 +2,13 @@ import React, { useState } from "react";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import IonicIcon from "react-native-vector-icons/Ionicons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import { View, Text, Dimensions } from "react-native";
 import { useTheme, Avatar } from "react-native-paper";
 
 import MainScreen from "../screens/Main";
 import ScanScreen from "../screens/Scan";
 import NotificationScreen from "../screens/Notification";
-import ProfileScreen from "../screens/Profile";
+import ProfileScreen from "../screens/ProfileDetail";
 import ChangePassword from "../screens/ChangePassword";
 
 const ProfileStack = createStackNavigator();
@@ -29,7 +27,7 @@ export default function Navigation() {
             iconName = "qr-code-scanner";
           } else if (route.name === "Notification") {
             iconName = focused ? "notifications-active" : "notifications";
-          } else if (route.name === "Profile") {
+          } else if (route.name === "ProfileDetail") {
             iconName = "person";
           }
           return (
@@ -49,7 +47,10 @@ export default function Navigation() {
         name="Notification"
         component={NotificationScreen}
       ></Tab.Screen>
-      <Tab.Screen name="Profile" component={ProfileStackScreen}></Tab.Screen>
+      <Tab.Screen
+        name="ProfileDetail"
+        component={ProfileStackScreen}
+      ></Tab.Screen>
     </Tab.Navigator>
   );
 }
